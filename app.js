@@ -76,6 +76,7 @@ app.get('/api/books',function(req,res){
 app.get('/api/:id',  (req, res) => {
   
   const id = req.params.id;
+  console.log(id);
     BookData.findOne({"_id":id})
     .then((book)=>{
         res.send(book);
