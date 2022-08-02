@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const ObjectId = mongoose.Types.ObjectId;
+[bookdata].query({ _id: ObjectId(id) });
 // mongoose.connect('mongodb://localhost:27017/Library');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -6,7 +8,7 @@ mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true,useUnifiedTopolo
 const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
-    _id:String,
+    // _id:String,
     bookId : String,
     title : String,
     author: String,
